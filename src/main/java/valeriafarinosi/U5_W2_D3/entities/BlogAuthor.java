@@ -8,7 +8,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.time.LocalDate;
-import java.util.Random;
 
 @Entity
 @Table(name = "authors")
@@ -37,8 +36,6 @@ public class BlogAuthor {
         this.surname = surname;
         this.email = email;
         this.birthDate = birthDate;
-        Random random = new Random();
-        this.authorId = random.nextInt(1, 10000);
         this.avatarURL = "https://ui-avatars.com/api/?name=Mario+Rossi";
     }
 }
