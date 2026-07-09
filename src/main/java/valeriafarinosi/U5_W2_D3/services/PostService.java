@@ -58,7 +58,12 @@ public class PostService {
 
         BlogAuthor author = this.authorService.findById(payload.getAuthorId());
 
-        BlogPost newPost = new BlogPost(payload.getBlogCategory(), payload.getTitle(), payload.getReadingTime(), payload.getContent(), author);
+        BlogPost newPost = new BlogPost(
+                payload.getBlogCategory(),
+                payload.getTitle(),
+                payload.getReadingTime(),
+                payload.getContent(),
+                author);
 
         BlogPost saved = this.postRepository.save(newPost);
         log.info("The post " + saved + " has been created!");
